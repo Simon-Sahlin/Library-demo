@@ -5,6 +5,12 @@
 }
 
 
+#bookContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding: 0px 20vw;
+}
 .book{
     background-color:beige;
     display: flex;
@@ -12,6 +18,7 @@
     align-items: center;
     gap: 1vw;
     padding: 2vw;
+    border-radius: 20px;
 }
 svg{
     height: 5vh;

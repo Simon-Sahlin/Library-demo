@@ -25,7 +25,7 @@ function addBookToLibrary(title, author, pages, read){
 
     h2.textContent = title;
     h3.textContent = author;
-    p.textContent = pages;
+    p.textContent = pages + " Pages";
     readBut.textContent = read ? "Read" : "Not Read";
     deleteBut.textContent = "Delete"
 
