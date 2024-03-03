@@ -3,3 +3,19 @@
     margin: 0;
     padding: 0;
 }
+
+
+.book{
+    background-color:beige;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    gap: 1vw;
+    padding: 2vw;
+}
+svg{
+    height: 5vh;
+}
+.book p{
+    flex-grow: 1;
+}
