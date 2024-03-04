@@ -39,7 +39,12 @@ function addBookToLibrary(title, author, pages, read){
         newBook.read = !newBook.read;
         readBut.textContent = newBook.read ? "Read" : "Not Read";
     });
-
+    deleteBut.addEventListener("click", ()=>{
+        let bookContainer = deleteBut.parentNode;
+        let index = Array.from(bookContainer.parentNode.children).indexOf(bookContainer);
+        myLibrary.splice(index, 1);
+        bookContainer.remove();
+    });
 
     container.appendChild(h2);
     container.appendChild(h3);
@@ -69,3 +74,4 @@ addBookButton.addEventListener("click", (event)=>{
 addBookToLibrary("Harry Potter", "J.K Rowling", 500, false);
 addBookToLibrary("Artemis", "Andy Wier", 342, true);
 addBookToLibrary("Atomic Habits", "James Clear", 291, false);
+addBookToLibrary("Cece är bäst", "Imon", 9999999, true);
