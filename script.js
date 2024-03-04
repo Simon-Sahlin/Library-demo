@@ -32,7 +32,14 @@ function addBookToLibrary(title, author, pages, read){
 
     container.classList.add("book");
     if (read)
-        readBut.classList.add("greenButton")
+        readBut.classList.add("greenButton");
+
+    readBut.addEventListener("click", ()=>{
+        readBut.classList.toggle("greenButton");
+        newBook.read = !newBook.read;
+        readBut.textContent = newBook.read ? "Read" : "Not Read";
+    });
+
 
     container.appendChild(h2);
     container.appendChild(h3);
