@@ -43,17 +43,22 @@
 
 body{
     background-color: var(--gray6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
 }
-h2,h3,p,button{
+h1,h2,h3,h4,p,button, label{
     font-family: var(--font-head);
     color: white;
     text-shadow: 1.9px 1.9px 0px black;
 }
-h2{
+h3{
     color: var(--green);
     font-size: 1.9em;
 }
-h3{
+h4{
     font-size: 1.5em;
 }
 p{
@@ -94,4 +99,39 @@ svg{
 }
 .book p{
     flex-grow: 1;
+}
+
+#formContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    gap: 10px;
+}
+
+#formContainer *{
+    width: 100%;
+}
+
+#hidden{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#hidden > div{
+    margin: 10px 0;
+    display: flex;
+}
+
+input{
+    background-color: var(--gray7);
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 9999px;
+
+    font-family: var(--font-head);
+    color: white;
+    text-shadow: 1.9px 1.9px 0px black;
 }

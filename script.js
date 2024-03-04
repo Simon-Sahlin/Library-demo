@@ -17,8 +17,8 @@ function addBookToLibrary(title, author, pages, read){
     myLibrary.push(newBook);
 
     let container = document.createElement("div")
-    let h2 = document.createElement("h2")
-    let h3 = document.createElement("h3")
+    let h2 = document.createElement("h3")
+    let h3 = document.createElement("h4")
     let p = document.createElement("p")
     let readBut = document.createElement("button")
     let deleteBut = document.createElement("button")
