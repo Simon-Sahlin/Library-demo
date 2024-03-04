@@ -31,6 +31,8 @@ function addBookToLibrary(title, author, pages, read){
     deleteBut.textContent = "Delete"
 
     container.classList.add("book");
+    if (read)
+        readBut.classList.add("greenButton")
 
     container.appendChild(h2);
     container.appendChild(h3);
