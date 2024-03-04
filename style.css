@@ -47,29 +47,37 @@ body{
 h2,h3,p,button{
     font-family: var(--font-head);
     color: white;
-    text-shadow: 1.5px 1.5px 0px black;
+    text-shadow: 1.9px 1.9px 0px black;
 }
 h2{
     color: var(--green);
+    font-size: 1.9em;
+}
+h3{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1.25em;
 }
 button{
     background-color: var(--red-dark);
     border: none;
     font-weight: 700;
-    padding: 12px;
+    padding: 15px;
     border-radius: 9999px;
-    box-shadow: 2px 2px 0px var(--red-darker);
+    box-shadow: 2.5px 2.5px 0px var(--red-darker);
     transition: all 0.05s;
+    font-size: 1.1em;
 }
 button:active{
-    translate: 2px 2px;
+    translate: 2.5px 2.5px;
     box-shadow: 0px 0px 0px var(--red-darker);
 }
 
 #bookContainer{
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 13px;
     padding: 0px 20vw;
 }
 .book{
@@ -79,7 +87,7 @@ button:active{
     align-items: center;
     gap: 1vw;
     padding: 2vw;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 svg{
     height: 5vh;
