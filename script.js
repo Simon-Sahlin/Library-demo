@@ -1,5 +1,6 @@
 let myLibrary = [];
 let bookListContainer = document.querySelector("#bookContainer");
+let addBookButton = document.querySelector("#addBookButton");
 
 function book(title, author, pages, read){
     this.title = title;
@@ -38,6 +39,23 @@ function addBookToLibrary(title, author, pages, read){
     container.appendChild(deleteBut);
     bookListContainer.appendChild(container);
 }
+
+addBookButton.addEventListener("click", (event)=>{
+    let newBookForm = {
+        title: document.forms["newBook"]["title"].value,
+        author: document.forms["newBook"]["author"].value,
+        pages: document.forms["newBook"]["pages"].value,
+        read: document.forms["newBook"]["read"].checked,
+    };
+
+    if(!(newBookForm.title && newBookForm.author && newBookForm.pages))
+        return;
+
+    addBookToLibrary(newBookForm.title, newBookForm.author, newBookForm.pages, newBookForm.read);
+    document.forms["newBook"].reset()
+    event.preventDefault();
+});
+
 
 addBookToLibrary("Harry Potter", "J.K Rowling", 500, false);
 addBookToLibrary("Artemis", "Andy Wier", 342, true);
