@@ -2,15 +2,16 @@ let myLibrary = [];
 let bookListContainer = document.querySelector("#bookContainer");
 let addBookButton = document.querySelector("#addBookButton");
 
-function book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-};
-
-book.prototype.info = function(){
-    return (this.title + " by " + this.author + ", " + this.qpages + " pages, " + (this.read ? "has been read" : "not read yet"));
+class book{
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info(){
+        return (this.title + " by " + this.author + ", " + this.qpages + " pages, " + (this.read ? "has been read" : "not read yet"));
+    }
 }
 
 function addBookToLibrary(title, author, pages, read){
